@@ -330,7 +330,13 @@ UnosTastatura = function(TextEntry, ExampleText, MaxStringLength)
     end
 end
 
+RegisterNetEvent("professr:admin")
+AddEventHandler("professr:admin", function()
+OtvoriAdminMeni()
+end)
+
 RegisterCommand('adminmeni',function()
-	OtvoriAdminMeni()
+	TriggerServerEvent('ludi:admin')
 	print("otvorio")
 end)
+
